@@ -30,6 +30,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:srcCompat="@drawable/arrow_anim"/>
+        <ImageView
+            android:id="@+id/iv_search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/searchbar_anim"/>
     </LinearLayout>
 
 </ScrollView>

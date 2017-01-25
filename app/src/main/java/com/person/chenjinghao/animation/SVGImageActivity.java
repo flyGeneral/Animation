@@ -20,6 +20,7 @@ public class SVGImageActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private ImageView ivLeftRightArrow;
+    private ImageView ivSearchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +33,12 @@ public class SVGImageActivity extends AppCompatActivity implements View.OnClickL
 
     private void initEvents() {
         ivLeftRightArrow.setOnClickListener(this);
+        ivSearchBar.setOnClickListener(this);
     }
 
     private void initWidght() {
         ivLeftRightArrow = (ImageView) findViewById(R.id.iv_left_right_arrow);
+        ivSearchBar = (ImageView) findViewById(R.id.iv_search_bar);
     }
 
     @Override
@@ -45,6 +48,12 @@ public class SVGImageActivity extends AppCompatActivity implements View.OnClickL
                 Drawable drawable = ivLeftRightArrow.getDrawable();
                 if (drawable instanceof Animatable){
                     ((Animatable)drawable).start();
+                }
+                break;
+            case R.id.iv_search_bar:
+                Drawable searchBarDrawable = ivSearchBar.getDrawable();
+                if (searchBarDrawable instanceof Animatable){
+                    ((Animatable)searchBarDrawable).start();
                 }
                 break;
         }
